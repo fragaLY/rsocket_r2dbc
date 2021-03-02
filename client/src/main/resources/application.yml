@@ -1,0 +1,8 @@
+server:
+  port: 8081
+  netty:
+    connection-timeout: 20s
+  shutdown: graceful
+  error:
+    whitelabel:
+      enabled: false

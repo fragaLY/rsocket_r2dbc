@@ -1,0 +1,9 @@
+CREATE SCHEMA IF NOT EXISTS EXAMPLE;
+
+SET SEARCH_PATH TO EXAMPLE;
+
+CREATE TABLE MESSAGE
+(
+    ID                    BIGSERIAL             PRIMARY KEY,
+    VALUE                 VARCHAR               NOT NULL
+);

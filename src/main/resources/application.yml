@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  netty:
+    connection-timeout: 20s
+  shutdown: graceful
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  rsocket:
+    server:
+      port: 8888
+      transport: websocket
+  main:
+    lazy-initialization: true
+    web-application-type: reactive
+    banner-mode: off
+  r2dbc:
+    username: user
+    password: P@55w0rd
+    url: r2dbc:postgresql://localhost:5432/example
+    pool:
+      enabled: true
+      initial-size: 5
+      max-size: 21
+
+logging.level:
+  ROOT: info
+  com.epam.charity: info
+  org.springframework: info
